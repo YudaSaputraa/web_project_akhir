@@ -86,9 +86,7 @@
             <a class="nav-link text-white active" href="daftar_klinik.php">Klinik</a>
           </li>
         </ul>
-        <span class="navbar-text">
-          <a class="nav-link text-secondary" href="../operation/logout.php">Logout</a>
-        </span>
+
       </div>
     </div>
   </nav>

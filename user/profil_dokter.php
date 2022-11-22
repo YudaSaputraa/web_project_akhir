@@ -79,9 +79,6 @@
           </li>
 
         </ul>
-        <span class="navbar-text">
-          <a class="nav-link text-secondary" href="../operation/logout.php">Logout</a>
-        </span>
       </div>
     </div>
   </nav>
