@@ -4,6 +4,7 @@ if (empty($_SESSION['username'])) {
     header("location:index.php?message=belum_login");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +124,7 @@ if (empty($_SESSION['username'])) {
                                 <tbody>
                                     <?php
                                     include '../connection/connection.php';
-                                    $sql = "SELECT pasien.nama_pasien, pasien.no_hp, pasien.alamat, klinik.id_klinik, klinik.nama_klinik, dokter.nip_dokter, dokter.nama
+                                    $sql = "SELECT pasien.id_pasien, pasien.nama_pasien, pasien.no_hp, pasien.alamat, klinik.id_klinik, klinik.nama_klinik, dokter.nip_dokter, dokter.nama
                                     FROM pasien
                                     INNER JOIN klinik ON klinik.id_klinik = pasien.id_klinik
                                     INNER JOIN dokter ON dokter.nip_dokter = pasien.nip_dokter;
@@ -139,7 +140,7 @@ if (empty($_SESSION['username'])) {
                                             <td><?= $data_pasien['alamat'] ?></td>
                                             <td><?= $data_pasien['nama'] ?></td>
                                             <td><?= $data_pasien['nama_klinik'] ?></td>
-                                            <td> <a type="submit" href="" class="btn"><img src="../assets/delete.png" width="25px" alt=""></a>
+                                            <td> <a type="submit" href="../operation/delete.php?id_pasien=<?= $data_pasien['id_pasien'] ?>" class="btn"><img src="../assets/delete.png" width="25px" alt=""></a>
                                             </td>
                                         </tr>
                                     <?php

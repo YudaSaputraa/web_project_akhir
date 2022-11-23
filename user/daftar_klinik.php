@@ -106,7 +106,7 @@
         $myquery = mysqli_query($connect, $sql);
         while ($data_klinik = mysqli_fetch_array($myquery)) {
         ?>
-          <div class="card-radius row gx-4 gx-lg-5 p-4 align-items-center my-5" style="background-color: #D6E4E5;">
+          <div class="card-radius row gx-4 gx-lg-5 p-4 align-items-center my-5" style="background-color: #0E5E6F;">
             <div class="col-lg-6"><img class="card_img img-fluid rounded mb-4 mb-lg-0" src="../assets/klinikk.png" alt="..." /></div>
             <div class="card-deskripsi col-lg-6">
               <h1 class="font-weight-light"><?= $data_klinik['nama_klinik'] ?></h1>

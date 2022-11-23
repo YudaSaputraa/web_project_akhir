@@ -3,8 +3,17 @@ session_start();
 if (empty($_SESSION['username'])) {
     header("location:index.php?message=belum_login");
 }
-?>
 
+if (isset($_GET['message'])) {
+    if ($_GET['message'] == 'hapus_gagal') {
+?>
+        <script>
+            alert("Data tidak dapat dihapus, karena masih terdaftar di table lain!");
+        </script>
+<?php
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
